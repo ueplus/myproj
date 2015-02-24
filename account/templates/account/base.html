@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/3.2.0/css/font-awesome.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    {% block head %}
+	{% endblock %}
+	</head>
+	
+	{% block stytle %} 
+	<style type="text/css">
+	    body{padding:0 5em;margin:0;background:url(/static/pic/background.png) no-repeat;}
+	    h1{padding:2em 1em;}
+	    h2{border-top:1px dotted #fff;margin-top:2em}
+		.addonsize{
+			width:40px;// if you want width please write here //
+			text-align:left;
+		}
+  	</style>
+	{% endblock %}
+	{% block title %} 
+	{% endblock %}
+	<body>
+	
+	<div  class="col-md-offset-8">
+		<p></p>
+		{% block baseinfo %}
+		<label>{{username}}你好，今天是{{date}}</label>
+		{% endblock %}		
+	</div>
+
+	
+	{% block body %} 
+	{% endblock %}
+	</body>
+	
+	{% block footer %} 
+	{% endblock %}
+</html>

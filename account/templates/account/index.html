@@ -1,0 +1,16 @@
+{% extends "account/base.html" %}
+
+{% block head %}
+{{ block.super}}
+<title>个人主页</title>
+{% endblock %}
+
+{% block baseinfo %}
+{{block.super}}
+<a href="/account/logout">退出</a>
+{% endblock %}
+{% block body %} 
+{{block.super}}
+
+<h1>welcome {{username}} !</h1>
+{% endblock %}
