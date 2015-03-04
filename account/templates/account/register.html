@@ -1,0 +1,40 @@
+{% extends "account/base.html" %}
+{% block head %}
+{{ block.super}}
+<title>用户注册</title>
+{% endblock %}
+
+{% block baseinfo %}
+<label>今天是{{date}}</label>
+{% endblock %}
+
+{% block body %} 
+{{block.super}}
+<h1 class="col-md-offset-8">注册账号</h1>
+<form method = 'post' enctype="multipart/form-data">
+<div class="col-md-offset-8">
+	<p></p>
+	<div class="input-group">
+		<span class="input-group-addon addonsize"><i class="icon-user icon-large"></i></span>
+		<input id="id_username" class="form-control inputreg" type="text" name="username" maxlength=15 placeholder="姓名">
+	</div>
+	<p></p>
+	<div class="input-group">
+		<span class="input-group-addon addonsize"><i class="icon-lock icon-large" ></i></span>
+		<input id="id_password" class="form-control inputreg" type="password" name="password" maxlength=15 placeholder="密码">
+	</div>
+	<p></p>
+	<div class="input-group">
+		<span class="input-group-addon addonsize"><i class="icon-envelope"></i></span>
+		<input id="id_email" class="form-control inputreg" type="text" name="email"  maxlength=15 placeholder="邮箱">
+	</div>
+     
+    <p></p>
+    <p></p>
+	<div class="form-actions">
+		<button class="btn btn-large btn-primary" type="submit">立即注册</button>
+	</div>
+</div>
+</form>
+
+{% endblock %}
