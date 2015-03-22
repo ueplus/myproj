@@ -1,0 +1,32 @@
+{% extends "contacts_base.html" %}
+
+{% block title %}
+{{block.super}}
+{% ifequal user.name NULL %}
+联系人
+{% else %}
+{{user.name}}的联系人
+{% endifequal %}
+{% endblock %}
+
+{% block body %}
+<table class="table-bordered table-hover">
+	<thead>
+		<tr class="dataHeader">
+            <th width="40">姓名</th>
+            <th width="80">电话</th>
+            <th width="120">生日</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for contact in contactlist %}
+		<tr>
+			<td>{{contact.name}}</td>
+			<td>{{contact.tel}}</td>
+			<td>{{contact.birth}}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}
