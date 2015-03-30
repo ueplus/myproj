@@ -38,8 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'userinfo',
     'gunicorn',
-    'reguser',
     'account',
+    'contacts', 
 )
 
 MIDDLEWARE_CLASSES = (
@@ -90,5 +90,6 @@ STATIC_ROOT= './static'
 
 #template
 TEMPLATE_DIRS={
-    'account/templates'
+    'account/templates',
+    'blogs/templates'
 }
